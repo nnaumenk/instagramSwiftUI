@@ -16,7 +16,7 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             List(accountNameArray, id: \.self) { accountName in
-                NavigationLink( destination: DetailsView(accountName: accountName)) {
+                NavigationLink( destination: DetailsView(model: DetailsModel(accountName: accountName))) {
                     Text(accountName)
                 }
             }
